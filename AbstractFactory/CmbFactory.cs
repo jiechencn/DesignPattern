@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AbstractFactory
 {
-    class CmbFactory : CardFactory
+    class CmbFactory : ICardFactory
     {
         public ICreditCard BuildCreditCard()
         {

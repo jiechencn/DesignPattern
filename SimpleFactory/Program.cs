@@ -2,11 +2,9 @@
 
 namespace SimpleFactory
 {
-    /*
-     if we have a superclass and n number of subclasses, and based on the data provided, 
-     if we have to create and return the object of one of the subclasses, then we need to use the factory design pattern.
-     The basic principle behind the factory design pattern is that, at run time, we get an object of similar type based on the parameter we pass. 
-     */
+    /// <summary>
+    /// 简单工厂类，一个父类和多个子类。子类的创建类型，是根据传入的参数标识（比如字符串）在运行时决定的。
+    /// </summary>
     class Program
     {
         static void Main(string[] args)

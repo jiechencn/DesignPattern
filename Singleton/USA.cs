@@ -4,6 +4,9 @@ using System.Text;
 
 namespace Singleton
 {
+    /// <summary>
+    /// 使用 lock保证线程安全
+    /// </summary>
     public sealed class USA
     {
         private static USA instance = null;
