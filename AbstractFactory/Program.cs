@@ -10,11 +10,11 @@ namespace AbstractFactory
     {
         static void Main(string[] args)
         {
-            CardFactory cmbFactory = new CmbFactory();
+            ICardFactory cmbFactory = new CmbFactory();
             ICard card1 = cmbFactory.BuildDebitCard();
             Console.WriteLine(card1.GetCardDetail());
 
-            CardFactory icbcFactory = new IcbcFactory();
+            ICardFactory icbcFactory = new IcbcFactory();
             ICard card2 = icbcFactory.BuildCreditCard();
             Console.WriteLine(card2.GetCardDetail());
         }
