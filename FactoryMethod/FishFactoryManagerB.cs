@@ -17,8 +17,9 @@ namespace FactoryMethod
             factories = new Dictionary<FishTypes, AbstraceFishFactory>();
             foreach (FishTypes t in Enum.GetValues(typeof(FishTypes)))
             {
-                // 创建出 FactoryMethod.LittleFishFactory 这样的实例来
-                var factory = (AbstraceFishFactory)Activator.CreateInstance(Type.GetType("FactoryMethod." + Enum.GetName(typeof(FishTypes), t) + "FishFactory"));
+                // 创建出 FactoryMethod.LittleFishFactory 这样的类型来
+                var klass = Type.GetType("FactoryMethod." + Enum.GetName(typeof(FishTypes), t) + "FishFactory");
+                var factory = (AbstraceFishFactory)Activator.CreateInstance(klass);
                 factories.Add(t, factory);
             }
         }
