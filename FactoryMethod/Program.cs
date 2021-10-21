@@ -12,11 +12,18 @@ namespace FactoryMethod
     {
         static void Main(string[] args)
         {
-            ICreditCard cmbCard = new CmbFactory().MakeCard();
-            Console.WriteLine(cmbCard.GetCardDetail());
+            var factory1 = new LittleFishFactory();
+            factory1.LetFishSwim();
 
-            ICreditCard icbcCard = new IcbcFactory().MakeCard();
-            Console.WriteLine(icbcCard.GetCardDetail());
+
+            var factory2 = new BigFishFactory();
+            factory2.LetFishSwim();
+
+            var factory3 = new FishFactoryManagerA().GetFactory(FishTypes.Little);
+            factory3.LetFishSwim();
+
+            var factory4 = new FishFactoryManagerB().GetFactory(FishTypes.Big);
+            factory4.LetFishSwim();
         }
     }
 }

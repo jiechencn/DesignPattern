@@ -4,11 +4,11 @@ using System.Text;
 
 namespace FactoryMethod
 {
-    class IcbcFactory : CreditCardFactory
+    class LittleFish : IFish
     {
-        protected override ICreditCard Design()
+        public void Swim()
         {
-            return new IcbcCreditCard();
+            Console.WriteLine($"{nameof(LittleFish)} is swimming");
         }
     }
 }

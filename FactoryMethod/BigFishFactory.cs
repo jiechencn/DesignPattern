@@ -4,11 +4,11 @@ using System.Text;
 
 namespace FactoryMethod
 {
-    class CmbFactory : CreditCardFactory
+    class BigFishFactory : AbstraceFishFactory
     {
-        protected override ICreditCard Design()
+        protected override IFish BuildFish()
         {
-            return new CmbCreditCard();
+            return new BigFish();
         }
     }
 }
