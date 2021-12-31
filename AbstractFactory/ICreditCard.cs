@@ -1,6 +1,6 @@
 ﻿namespace AbstractFactory
 {
-    public interface ICreditCard : ICard
+    interface ICreditCard : ICard
     {
     }
 }

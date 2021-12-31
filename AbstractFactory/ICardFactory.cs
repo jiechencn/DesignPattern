@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AbstractFactory
 {
-    public interface ICardFactory
+    interface ICardFactory
     {
         public IDebitCard BuildDebitCard();
         public ICreditCard BuildCreditCard();
