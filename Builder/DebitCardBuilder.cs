@@ -4,14 +4,14 @@ using System.Text;
 
 namespace Builder
 {
-    public class DebitCardBuilder : ICardBuilder
+    class DebitCardBuilder : ICardBuilder
     {
         public ICard Card { get; set ; }
         public DebitCardBuilder(string name)
         {
             Card = new DebitCard(name);
         }
-        public void BuildCard()
+        public void BuildBlankCard()
         {
             Card.CardType = "DebitCard";
         }

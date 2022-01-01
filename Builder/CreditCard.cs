@@ -1,6 +1,6 @@
 ﻿namespace Builder
 {
-    internal class CreditCard : ICard
+    class CreditCard : ICard
     {
         public string Name { get; set; }
         public CreditCard(string name)

@@ -1,6 +1,6 @@
 ﻿namespace Builder
 {
-    public interface ICard
+    interface ICard
     {
         string Name { get; set; }
         string CardType { get; set; }

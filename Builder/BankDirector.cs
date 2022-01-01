@@ -1,11 +1,11 @@
 ﻿namespace Builder
 {
-    public class BankDirector
+    class BankDirector
     {
         public ICardBuilder Builder { get; set; }
         public void Construct()
         {
-            Builder.BuildCard();
+            Builder.BuildBlankCard();
             Builder.PrintCardNumber();
             Builder.PrintName();
             Builder.SetCharge();

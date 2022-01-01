@@ -18,7 +18,7 @@ namespace Builder
 
             // without director
             ICardBuilder builder2 = new DebitCardBuilder("Chen Jie");
-            builder2.BuildCard();
+            builder2.BuildBlankCard();
             builder2.PrintCardNumber();
             builder2.PrintName();
             builder2.SetCharge();

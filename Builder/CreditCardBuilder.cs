@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Builder
 {
-    public class CreditCardBuilder : ICardBuilder
+    class CreditCardBuilder : ICardBuilder
     {
         public ICard Card { get; set ; }
 
@@ -13,7 +13,7 @@ namespace Builder
             Card = new CreditCard(name);
             
         }
-        public void BuildCard()
+        public void BuildBlankCard()
         {
             Card.CardType = "CreditCard";
         }
