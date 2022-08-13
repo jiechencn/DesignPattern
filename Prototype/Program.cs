@@ -6,27 +6,39 @@ namespace Prototype
     {
         static void Main(string[] args)
         {
-            Person person1 = new Person();
-            person1.Age = 18;
-            person1.Gender = 'M';
-            person1.Fullname = new FullName { FirstName = "Jie1", LastName = "Chen" };
-            Console.WriteLine(person1.ToString());
-            Console.WriteLine();
 
-            Person person2 = person1.ShallowCopy();
-            person1.Age = 28;
-            person1.Fullname = new FullName { FirstName = "Jie11", LastName = "Chen" };
-            Console.WriteLine(person1.ToString());
-            Console.WriteLine(person2.ToString());
-            Console.WriteLine();
+            CatRobot cat = new CatRobot
+            {
+                Brain = new Brain { Think = new Think { Width = "Poor" } },
+                Body = new Body { Skin = new Skin { Color = "Black and white" } }
+            };
 
-            Person person3 = person1.DeepCopy();
-            person1.Age = 38;
-            person1.Fullname = new FullName { FirstName = "Jie111", LastName = "Chen" };
-            Console.WriteLine(person1.ToString());
-            Console.WriteLine(person2.ToString());
-            Console.WriteLine(person3.ToString());
+            HumanRobot human = new HumanRobot
+            {
+                Brain = new Brain { Think = new Think { Width = "Good" } },
+                Body = new Body { Skin = new Skin { Color = "Yellow" } }
+            };
 
+
+            RobotManager robotManager = new RobotManager();
+
+            robotManager.Register("cat", cat);
+            robotManager.Register("human", human);
+
+            AbstractRobotPrototype robot1a = robotManager.Create("cat");
+            AbstractRobotPrototype robot1b = robotManager.Create("cat");
+            robot1b.Brain = new Brain { Think = new Think { Width = "Good" } };
+            robot1b.Body = new Body { Skin = new Skin { Color = "Colorful" } };
+
+            AbstractRobotPrototype robot2a = robotManager.Create("human");
+            AbstractRobotPrototype robot2b = robotManager.Create("human");
+            robot2b.Brain = new Brain { Think = new Think { Width = "Poor" } };
+            robot2b.Body = new Body { Skin = new Skin { Color = "Black" } };
+
+            Console.WriteLine(robot1a.ToString());
+            Console.WriteLine(robot1b.ToString());
+            Console.WriteLine(robot2a.ToString());
+            Console.WriteLine(robot2b.ToString());
         }
     }
 }
