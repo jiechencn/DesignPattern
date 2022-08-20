@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Iterator", "Iterator\Iterat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", "Template\Template.csproj", "{5922AAD7-215B-4CA2-A4CF-9E31847D4739}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Strategy\Strategy.csproj", "{90E6CA15-2257-4AEF-B7DC-340C92A20195}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Strategy", "Strategy\Strategy.csproj", "{90E6CA15-2257-4AEF-B7DC-340C92A20195}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Decorator", "Decorator\Decorator.csproj", "{7383838F-36D9-4F1B-B0F4-6EC35BE933B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{90E6CA15-2257-4AEF-B7DC-340C92A20195}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90E6CA15-2257-4AEF-B7DC-340C92A20195}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90E6CA15-2257-4AEF-B7DC-340C92A20195}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7383838F-36D9-4F1B-B0F4-6EC35BE933B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7383838F-36D9-4F1B-B0F4-6EC35BE933B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7383838F-36D9-4F1B-B0F4-6EC35BE933B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7383838F-36D9-4F1B-B0F4-6EC35BE933B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
